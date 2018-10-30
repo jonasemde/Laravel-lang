@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -9,7 +8,7 @@ return [
     |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
-    | such as the size rules. Feel free to tweak each of these messages.
+    | as the size rules. Feel free to tweak each of these messages.
     |
     */
 
@@ -42,12 +41,38 @@ return [
     'exists'               => 'O valor selecionado para o campo :attribute é inválido.',
     'file'                 => 'O campo :attribute deverá conter um ficheiro.',
     'filled'               => 'É obrigatória a indicação de um valor para o campo :attribute.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => 'O campo :attribute deverá conter uma imagem.',
     'in'                   => 'O campo :attribute não contém um valor válido.',
     'in_array'             => 'O campo :attribute não existe em :other.',
     'integer'              => 'O campo :attribute deverá conter um número inteiro.',
     'ip'                   => 'O campo :attribute deverá conter um IP válido.',
+    'ipv4'                 => 'O campo :attribute deverá conter um IPv4 válido.',
+    'ipv6'                 => 'O campo :attribute deverá conter um IPv6 válido.',
     'json'                 => 'O campo :attribute deverá conter um texto JSON válido.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => 'O campo :attribute não deverá conter um valor superior a :max.',
         'file'    => 'O campo :attribute não deverá ter um tamanho superior a :max kilobytes.',
@@ -63,6 +88,7 @@ return [
         'array'   => 'O campo :attribute deverá conter no mínimo :min elementos.',
     ],
     'not_in'               => 'O campo :attribute contém um valor inválido.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => 'O campo :attribute deverá conter um valor numérico.',
     'present'              => 'O campo :attribute deverá estar presente.',
     'regex'                => 'O formato do valor para o campo :attribute é inválido.',
@@ -97,7 +123,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -114,8 +140,6 @@ return [
     |
     */
 
-    'attributes'           => [
-        //
+    'attributes' => [
     ],
-
 ];

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -9,20 +8,20 @@ return [
     |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
-    | such as the size rules. Feel free to tweak each of these messages.
+    | as the size rules. Feel free to tweak each of these messages.
     |
     */
 
     'accepted'             => ':attribute musí byť akceptovaný.',
     'active_url'           => ':attribute má neplatnú URL adresu.',
     'after'                => ':attribute musí byť dátum po :date.',
-    'after_or_equal'       => 'The :attribute must be a date after or equal to :date.',
+    'after_or_equal'       => ':attribute musí byť dátum po alebo presne :date.',
     'alpha'                => ':attribute môže obsahovať len písmená.',
     'alpha_dash'           => ':attribute môže obsahovať len písmená, čísla a pomlčky.',
     'alpha_num'            => ':attribute môže obsahovať len písmená, čísla.',
     'array'                => ':attribute musí byť pole.',
     'before'               => ':attribute musí byť dátum pred :date.',
-    'before_or_equal'      => 'The :attribute must be a date before or equal to :date.',
+    'before_or_equal'      => ':attribute musí byť dátum pred alebo presne :date.',
     'between'              => [
         'numeric' => ':attribute musí mať rozsah :min - :max.',
         'file'    => ':attribute musí mať rozsah :min - :max kilobajtov.',
@@ -36,18 +35,44 @@ return [
     'different'            => ':attribute a :other musia byť odlišné.',
     'digits'               => ':attribute musí mať :digits číslic.',
     'digits_between'       => ':attribute musí mať rozsah :min až :max číslic.',
-    'dimensions'           => 'The :attribute has invalid image dimensions.',
+    'dimensions'           => ':attribute má neplatné rozmery obrázku.',
     'distinct'             => ':attribute je duplicitný.',
     'email'                => ':attribute má neplatný formát.',
     'exists'               => 'označený :attribute je neplatný.',
-    'file'                 => 'The :attribute must be a file.',
+    'file'                 => ':attribute musí byť súbor.',
     'filled'               => ':attribute je požadované.',
+    'gt'                   => [
+        'numeric' => 'Hodnota :attribute musí byť väčšia ako :value.',
+        'file'    => ':Attribute musí mať viac kilobajtov ako :value.',
+        'string'  => ':Attribute musí mať viac znakov ako :value.',
+        'array'   => ':Attribute musí mať viac prvkov ako :value.',
+    ],
+    'gte'                  => [
+        'numeric' => 'Hodnota :attribute musí byť väčšia alebo rovná ako :value.',
+        'file'    => ':Attribute musí mať rovnaký alebo väčší počet kilobajtov ako :value.',
+        'string'  => ':Attribute musí mať rovnaký alebo väčší počet znakov ako :value.',
+        'array'   => ':Attribute musí mať rovnaký alebo väčší počet prvkov ako :value.',
+    ],
     'image'                => ':attribute musí byť obrázok.',
     'in'                   => 'označený :attribute je neplatný.',
     'in_array'             => ':attribute sa nenachádza v :other.',
     'integer'              => ':attribute musí byť celé číslo.',
     'ip'                   => ':attribute musí byť platná IP adresa.',
+    'ipv4'                 => ':attribute musí byť platná IPv4 adresa.',
+    'ipv6'                 => ':attribute musí byť platná IPv6 adresa.',
     'json'                 => ':attribute musí byť platný JSON reťazec.',
+    'lt'                   => [
+        'numeric' => 'Hodnota :attribute musí byť menšia ako :value.',
+        'file'    => ':Attribute musí mať menej kilobajtov ako :value.',
+        'string'  => ':Attribute musí mať menej znakov ako :value.',
+        'array'   => ':Attribute musí mať menej prvkov ako :value.',
+    ],
+    'lte'                  => [
+        'numeric' => 'Hodnota :attribute musí byť menšia alebo rovná ako :value.',
+        'file'    => ':Attribute musí mať rovnaký alebo menší počet kilobajtov ako :value.',
+        'string'  => ':Attribute musí mať rovnaký alebo menší počet znakov ako :value.',
+        'array'   => ':Attribute musí mať rovnaký alebo menší počet prvkov ako :value.',
+    ],
     'max'                  => [
         'numeric' => ':attribute nemôže byť väčší ako :max.',
         'file'    => ':attribute nemôže byť väčší ako :max kilobajtov.',
@@ -63,6 +88,7 @@ return [
         'array'   => ':attribute musí mať aspoň :min prvkov.',
     ],
     'not_in'               => 'označený :attribute je neplatný.',
+    'not_regex'            => ':attribute má neplatný formát.',
     'numeric'              => ':attribute musí byť číslo.',
     'present'              => ':attribute musí byť odoslaný.',
     'regex'                => ':attribute má neplatný formát.',
@@ -83,7 +109,7 @@ return [
     'string'               => ':attribute musí byť reťazec znakov.',
     'timezone'             => ':attribute musí byť platné časové pásmo.',
     'unique'               => ':attribute už existuje.',
-    'uploaded'             => 'The :attribute failed to upload.',
+    'uploaded'             => 'Nepodarilo sa nahrať :attribute.',
     'url'                  => ':attribute musí mať formát URL.',
 
     /*
@@ -97,7 +123,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -114,8 +140,6 @@ return [
     |
     */
 
-    'attributes'           => [
-        //
+    'attributes' => [
     ],
-
 ];

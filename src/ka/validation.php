@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -42,12 +41,38 @@ return [
     'exists'               => 'ასეთი :attribute არ არსებობს.',
     'file'                 => ':attribute უნდა იყოს ფაილი.',
     'filled'               => ':attribute აუცილებელია.',
+    'gt'                   => [
+        'numeric' => ':attribute უნდა იყოს :value-ზე მეტი.',
+        'file'    => ':attribute უნდა იყოს :value კილობაიტზე მეტი.',
+        'string'  => ':attribute უნდა შეიცავდეს :value სიმბოლოზე მეტს.',
+        'array'   => ':attribute უნდა შეიცავლდეს :value ელემენტზე მეტს.',
+    ],
+    'gte'                  => [
+        'numeric' => ':attribute უნდა იყოს მინიმუმ :value.',
+        'file'    => ':attribute უნდა იყოს მინიმუმ :value კილობაიტი.',
+        'string'  => ':attribute უნდა შეიცავდეს მინიმუმ :value სიმბოლოს.',
+        'array'   => ':attribute უნდა შეიცავდეს მინიმუმ :value ელემენტს.',
+    ],
     'image'                => ':attribute უნდა იყოს სურათი.',
     'in'                   => 'მითითებული :attribute არასწორია.',
     'in_array'             => ':attribute უნდა არსებობდეს :other-ში.',
     'integer'              => ':attribute უნდა იყოს მთელი რიცხვი.',
     'ip'                   => ':attribute უნდა იყოს IP მისამართი.',
+    'ipv4'                 => ':attribute უნდა იყოს IPv4 მისამართი.',
+    'ipv6'                 => ':attribute უნდა იყოს IPv6 მისამართი.',
     'json'                 => ':attribute უნდა იყოს JSON ტიპის.',
+    'lt'                   => [
+        'numeric' => ':attribute უნდა იყოს :value-ზე ნაკლები.',
+        'file'    => ':attribute უნდა იყოს :value კილობაიტზე ნაკლები.',
+        'string'  => ':attribute უნდა შეიცავდეს :value სიმბოლოზე ნაკლებს.',
+        'array'   => ':attribute უნდა შეიცავლდეს :value ელემენტზე ნაკლებს.',
+    ],
+    'lte'                  => [
+        'numeric' => ':attribute უნდა იყოს მაქსიმუმ :value.',
+        'file'    => ':attribute უნდა იყოს მაქსიმუმ :value კილობაიტი.',
+        'string'  => ':attribute უნდა შეიცავდეს მაქსიმუმ :value სიმბოლოს.',
+        'array'   => ':attribute უნდა შეიცავდეს მაქსიმუმ :value ელემენტს.',
+    ],
     'max'                  => [
         'numeric' => ':attribute არ უნდა აღემატებოდეს :max-ს.',
         'file'    => ':attribute არ უნდა აღემატებოდეს :max კილობაიტს.',
@@ -63,6 +88,7 @@ return [
         'array'   => ':attribute უნდა იყოს მინიმუმ :min.',
     ],
     'not_in'               => 'მითითებული :attribute არასწორია.',
+    'not_regex'            => ':attribute არასწორ ფორმატშია.',
     'numeric'              => ':attribute უნდა იყოს რიცხვი.',
     'present'              => ':attribute უნდა არსებობდეს, თუნდაც ცარიელი.',
     'regex'                => ':attribute არ ემთხვევა ფორმატს.',
@@ -97,7 +123,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -114,8 +140,6 @@ return [
     |
     */
 
-    'attributes'           => [
-        //
+    'attributes' => [
     ],
-
 ];

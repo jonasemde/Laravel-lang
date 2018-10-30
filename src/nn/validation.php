@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -9,7 +8,7 @@ return [
     |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
-    | such as the size rules. Feel free to tweak each of these messages.
+    | as the size rules. Feel free to tweak each of these messages.
     |
     */
 
@@ -42,12 +41,38 @@ return [
     'exists'               => 'Det valde :attribute er ugyldig.',
     'file'                 => 'The :attribute must be a file.',
     'filled'               => ':attribute må fyllast ut.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => ':attribute skal vere eit bilete.',
     'in'                   => 'Det valde :attribute er ugyldig.',
     'in_array'             => ':attribute eksisterer ikkje i :other.',
     'integer'              => ':attribute skal vere eit heiltal.',
     'ip'                   => ':attribute skal vere ei gyldig IP-adresse.',
+    'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
+    'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
     'json'                 => ':attribute må vere på JSON-format.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => ':attribute skal vere mindre enn :max.',
         'file'    => ':attribute skal vere mindre enn :max kilobytes.',
@@ -63,6 +88,7 @@ return [
         'array'   => ':attribute må vere minst :min element.',
     ],
     'not_in'               => 'Den valgte :attribute er ugyldig.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => ':attribute skal vere eit tal.',
     'present'              => ':attribute må vere til stades.',
     'regex'                => 'Formatet på :attribute er ugyldig.',
@@ -115,7 +141,5 @@ return [
     */
 
     'attributes' => [
-        //
     ],
-
 ];

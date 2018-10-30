@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -16,13 +15,13 @@ return [
     'accepted'             => 'Το πεδίο :attribute πρέπει να γίνει αποδεκτό.',
     'active_url'           => 'Το πεδίο :attribute δεν είναι αποδεκτή διεύθυνση URL.',
     'after'                => 'Το πεδίο :attribute πρέπει να είναι μία ημερομηνία μετά από :date.',
-    'after_or_equal'       => 'The :attribute must be a date after or equal to :date.',
+    'after_or_equal'       => 'Το πεδίο :attribute πρέπει να είναι μία ημερομηνία ίδια ή μετά από :date.',
     'alpha'                => 'Το πεδίο :attribute μπορεί να περιέχει μόνο γράμματα.',
     'alpha_dash'           => 'Το πεδίο :attribute μπορεί να περιέχει μόνο γράμματα, αριθμούς, και παύλες.',
     'alpha_num'            => 'Το πεδίο :attribute μπορεί να περιέχει μόνο γράμματα και αριθμούς.',
     'array'                => 'Το πεδίο :attribute πρέπει να είναι ένας πίνακας.',
     'before'               => 'Το πεδίο :attribute πρέπει να είναι μία ημερομηνία πριν από :date.',
-    'before_or_equal'      => 'The :attribute must be a date before or equal to :date.',
+    'before_or_equal'      => 'Το πεδίο :attribute πρέπει να είναι μία ημερομηνία ίδια ή πριν από :date.',
     'between'              => [
         'numeric' => 'Το πεδίο :attribute πρέπει να είναι μεταξύ :min - :max.',
         'file'    => 'Το πεδίο :attribute πρέπει να είναι μεταξύ :min - :max kilobytes.',
@@ -36,18 +35,44 @@ return [
     'different'            => 'Το πεδίο :attribute και :other πρέπει να είναι διαφορετικά.',
     'digits'               => 'Το πεδίο :attribute πρέπει να είναι :digits ψηφία.',
     'digits_between'       => 'Το πεδίο :attribute πρέπει να είναι μεταξύ :min και :max ψηφία.',
-    'dimensions'           => 'The :attribute has invalid image dimensions.',
-    'distinct'             => 'The :attribute field has a duplicate value.',
+    'dimensions'           => 'Το πεδίο :attribute περιέχει μη έγκυρες διαστάσεις εικόνας.',
+    'distinct'             => 'Το πεδίο :attribute περιέχει δύο φορές την ίδια τιμή.',
     'email'                => 'Το πεδίο :attribute πρέπει να είναι μία έγκυρη διεύθυνση email.',
-    'file'                 => 'The :attribute must be a file.',
+    'file'                 => 'Το πεδίο :attribute πρέπει να είναι αρχείο.',
     'filled'               => 'To πεδίο :attribute είναι απαραίτητο.',
     'exists'               => 'Το επιλεγμένο :attribute δεν είναι έγκυρο.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => 'Το πεδίο :attribute πρέπει να είναι εικόνα.',
     'in'                   => 'Το επιλεγμένο :attribute δεν είναι έγκυρο.',
-    'in_array'             => 'The :attribute field does not exist in :other.',
+    'in_array'             => 'Το πεδίο :attribute δεν υπάρχει σε :other.',
     'integer'              => 'Το πεδίο :attribute πρέπει να είναι ακέραιος.',
     'ip'                   => 'Το πεδίο :attribute πρέπει να είναι μία έγκυρη διεύθυνση IP.',
+    'ipv4'                 => 'Το πεδίο :attribute πρέπει να είναι μία έγκυρη διεύθυνση IPv4.',
+    'ipv6'                 => 'Το πεδίο :attribute πρέπει να είναι μία έγκυρη διεύθυνση IPv6.',
     'json'                 => 'Το πεδίο :attribute πρέπει να είναι μία έγκυρη συμβολοσειρά JSON.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => 'Το πεδίο :attribute δεν μπορεί να είναι μεγαλύτερο από :max.',
         'file'    => 'Το πεδίο :attribute δεν μπορεί να είναι μεγαλύτερό :max kilobytes.',
@@ -63,8 +88,9 @@ return [
         'array'   => 'Το πεδίο :attribute πρέπει να έχει τουλάχιστον :min αντικείμενα.',
     ],
     'not_in'               => 'Το επιλεγμένο :attribute δεν είναι αποδεκτό.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => 'Το πεδίο :attribute πρέπει να είναι αριθμός.',
-    'present'              => 'The :attribute field must be present.',
+    'present'              => 'Το πεδίο :attribute πρέπει να υπάρχει.',
     'regex'                => 'Η μορφή του :attribute δεν είναι αποδεκτή.',
     'required'             => 'Το πεδίο :attribute είναι απαραίτητο.',
     'required_if'          => 'Το πεδίο :attribute είναι απαραίτητο όταν το πεδίο :other είναι :value.',
@@ -83,7 +109,7 @@ return [
     'string'               => 'Το πεδίο :attribute πρέπει να είναι αλφαριθμητικό.',
     'timezone'             => 'Το πεδίο :attribute πρέπει να είναι μία έγκυρη ζώνη ώρας.',
     'unique'               => 'Το πεδίο :attribute έχει ήδη εκχωρηθεί.',
-    'uploaded'             => 'The :attribute failed to upload.',
+    'uploaded'             => 'Η μεταφόρτωση του πεδίου :attribute απέτυχε.',
     'url'                  => 'Το πεδίο :attribute δεν είναι έγκυρη διεύθυνση URL.',
 
     /*
@@ -97,7 +123,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -115,7 +141,5 @@ return [
     */
 
     'attributes' => [
-        //
     ],
-
 ];

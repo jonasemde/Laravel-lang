@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -9,20 +8,20 @@ return [
     |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
-    | such as the size rules. Feel free to tweak each of these messages.
+    | as the size rules. Feel free to tweak each of these messages.
     |
     */
 
     'accepted'             => ':attribute musi zostać zaakceptowany.',
     'active_url'           => ':attribute jest nieprawidłowym adresem URL.',
     'after'                => ':attribute musi być datą późniejszą od :date.',
-    'after_or_equal'       => 'The :attribute must be a date after or equal to :date.',
+    'after_or_equal'       => ':attribute musi być datą nie wcześniejszą niż :date.',
     'alpha'                => ':attribute może zawierać jedynie litery.',
     'alpha_dash'           => ':attribute może zawierać jedynie litery, cyfry i myślniki.',
     'alpha_num'            => ':attribute może zawierać jedynie litery i cyfry.',
     'array'                => ':attribute musi być tablicą.',
     'before'               => ':attribute musi być datą wcześniejszą od :date.',
-    'before_or_equal'      => 'The :attribute must be a date before or equal to :date.',
+    'before_or_equal'      => ':attribute musi być datą nie późniejszą niż :date.',
     'between'              => [
         'numeric' => ':attribute musi zawierać się w granicach :min - :max.',
         'file'    => ':attribute musi zawierać się w granicach :min - :max kilobajtów.',
@@ -42,12 +41,38 @@ return [
     'exists'               => 'Zaznaczony :attribute jest nieprawidłowy.',
     'file'                 => ':attribute musi być plikiem.',
     'filled'               => 'Pole :attribute jest wymagane.',
+    'gt'                   => [
+        'numeric' => ':attribute musi być większy niż :value.',
+        'file'    => ':attribute musi być większy niż :value kilobajtów.',
+        'string'  => ':attribute musi być dłuższy niż :value znaków.',
+        'array'   => ':attribute musi mieć więcej niż :value elementów.',
+    ],
+    'gte'                  => [
+        'numeric' => ':attribute musi być większy lub równy :value.',
+        'file'    => ':attribute musi być większy lub równy :value kijobajtów.',
+        'string'  => ':attribute musi być dłuższy lub równy :value znaków.',
+        'array'   => ':attribute musi mieć :value lub więcej elementów.',
+    ],
     'image'                => ':attribute musi być obrazkiem.',
     'in'                   => 'Zaznaczony :attribute jest nieprawidłowy.',
-    'in_array'             => ':attribute nie znajduje się w :other.',
+    'in_array'             => ':attribute nie znajduje się w :other.',
     'integer'              => ':attribute musi być liczbą całkowitą.',
     'ip'                   => ':attribute musi być prawidłowym adresem IP.',
+    'ipv4'                 => ':attribute musi być prawidłowym adresem IPv4.',
+    'ipv6'                 => ':attribute musi być prawidłowym adresem IPv6.',
     'json'                 => ':attribute musi być poprawnym ciągiem znaków JSON.',
+    'lt'                   => [
+        'numeric' => ':attribute musi być mniejszy niż :value.',
+        'file'    => ':attribute musi być mniejszy niż :value kijobajtów.',
+        'string'  => ':attribute musi być krótszy niż :value znaków.',
+        'array'   => ':attribute musi mieć mniej niż :value elementów.',
+    ],
+    'lte'                  => [
+        'numeric' => ':attribute musi być mniejszy lub równy :value.',
+        'file'    => ':attribute musi być mniejszy lub równy :value kijobajtów.',
+        'string'  => ':attribute musi być krótszy lub równy :value znaków.',
+        'array'   => ':attribute musi mieć :value lub mniej elementów.',
+    ],
     'max'                  => [
         'numeric' => ':attribute nie może być większy niż :max.',
         'file'    => ':attribute nie może być większy niż :max kilobajtów.',
@@ -63,8 +88,9 @@ return [
         'array'   => ':attribute musi mieć przynajmniej :min elementów.',
     ],
     'not_in'               => 'Zaznaczony :attribute jest nieprawidłowy.',
+    'not_regex'            => 'Format :attribute jest nieprawidłowy.',
     'numeric'              => ':attribute musi być liczbą.',
-    'present'              => ':attribute musi być teraźniejszy.',
+    'present'              => 'Pole :attribute musi być obecne.',
     'regex'                => 'Format :attribute jest nieprawidłowy.',
     'required'             => 'Pole :attribute jest wymagane.',
     'required_if'          => 'Pole :attribute jest wymagane gdy :other jest :value.',
@@ -83,7 +109,7 @@ return [
     'string'               => ':attribute musi być ciągiem znaków.',
     'timezone'             => ':attribute musi być prawidłową strefą czasową.',
     'unique'               => 'Taki :attribute już występuje.',
-    'uploaded'             => 'The :attribute failed to upload.',
+    'uploaded'             => 'Nie udało się wgrać pliku :attribute.',
     'url'                  => 'Format :attribute jest nieprawidłowy.',
 
     /*
@@ -97,7 +123,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -114,8 +140,6 @@ return [
     |
     */
 
-    'attributes'           => [
-        //
+    'attributes' => [
     ],
-
 ];

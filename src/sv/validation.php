@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Validation Language Lines
@@ -9,20 +8,20 @@ return [
     |
     | The following language lines contain the default error messages used by
     | the validator class. Some of these rules have multiple versions such
-    | such as the size rules. Feel free to tweak each of these messages.
+    | as the size rules. Feel free to tweak each of these messages.
     |
     */
 
     'accepted'             => ':attribute måste accepteras.',
     'active_url'           => ':attribute är inte en giltig webbadress.',
     'after'                => ':attribute måste vara ett datum efter den :date.',
-    'after_or_equal'       => 'The :attribute must be a date after or equal to :date.',
+    'after_or_equal'       => ':attribute måste vara ett datum senare eller samma dag som :date.',
     'alpha'                => ':attribute får endast innehålla bokstäver.',
     'alpha_dash'           => ':attribute får endast innehålla bokstäver, siffror och bindestreck.',
     'alpha_num'            => ':attribute får endast innehålla bokstäver och siffror.',
     'array'                => ':attribute måste vara en array.',
     'before'               => ':attribute måste vara ett datum innan den :date.',
-    'before_or_equal'      => 'The :attribute must be a date before or equal to :date.',
+    'before_or_equal'      => ':attribute måste vara ett datum före eller samma dag som :date.',
     'between'              => [
         'numeric' => ':attribute måste vara en siffra mellan :min och :max.',
         'file'    => ':attribute måste vara mellan :min till :max kilobyte stor.',
@@ -42,12 +41,38 @@ return [
     'exists'               => ':attribute är ogiltigt.',
     'file'                 => ':attribute måste vara en fil.',
     'filled'               => ':attribute är obligatoriskt.',
+    'gt'                   => [
+        'numeric' => ':attribute måste vara större än :value.',
+        'file'    => ':attribute måste vara större än :value kilobyte stor.',
+        'string'  => ':attribute måste vara längre än :value tecken.',
+        'array'   => ':attribute måste innehålla fler än :value objekt.',
+    ],
+    'gte'                  => [
+        'numeric' => ':attribute måste vara lika med eller större än :value.',
+        'file'    => ':attribute måste vara lika med eller större än :value kilobyte stor.',
+        'string'  => ':attribute måste vara lika med eller längre än :value tecken.',
+        'array'   => ':attribute måste innehålla lika många eller fler än :value objekt.',
+    ],
     'image'                => ':attribute måste vara en bild.',
     'in'                   => ':attribute är ogiltigt.',
     'in_array'             => ':attribute finns inte i :other.',
     'integer'              => ':attribute måste vara en siffra.',
     'ip'                   => ':attribute måste vara en giltig IP-adress.',
+    'ipv4'                 => ':attribute måste vara en giltig IPv4-adress.',
+    'ipv6'                 => ':attribute måste vara en giltig IPv6-adress.',
     'json'                 => ':attribute måste vara en giltig JSON-sträng.',
+    'lt'                   => [
+        'numeric' => ':attribute måste vara mindre än :value.',
+        'file'    => ':attribute måste vara mindre än :value kilobyte stor.',
+        'string'  => ':attribute måste vara kortare än :value tecken.',
+        'array'   => ':attribute måste innehålla färre än :value objekt.',
+    ],
+    'lte'                  => [
+        'numeric' => ':attribute måste vara lika med eller mindre än :value.',
+        'file'    => ':attribute måste vara lika med eller mindre än :value kilobyte stor.',
+        'string'  => ':attribute måste vara lika med eller kortare än :value tecken.',
+        'array'   => ':attribute måste innehålla lika många eller färre än :value objekt.',
+    ],
     'max'                  => [
         'numeric' => ':attribute får inte vara större än :max.',
         'file'    => ':attribute får max vara :max kilobyte stor.',
@@ -63,6 +88,7 @@ return [
         'array'   => ':attribute måste innehålla minst :min objekt.',
     ],
     'not_in'               => ':attribute är ogiltigt.',
+    'not_regex'            => 'Formatet för :attribute är ogiltigt.',
     'numeric'              => ':attribute måste vara en siffra.',
     'present'              => ':attribute måste finnas med.',
     'regex'                => ':attribute har ogiltigt format.',
@@ -83,7 +109,7 @@ return [
     'string'               => ':attribute måste vara en sträng.',
     'timezone'             => ':attribute måste vara en giltig tidszon.',
     'unique'               => ':attribute används redan.',
-    'uploaded'             => 'The :attribute failed to upload.',
+    'uploaded'             => ':attribute kunde inte laddas upp.',
     'url'                  => ':attribute har ett ogiltigt format.',
 
     /*
@@ -97,7 +123,7 @@ return [
     |
     */
 
-    'custom'               => [
+    'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
@@ -114,8 +140,6 @@ return [
     |
     */
 
-    'attributes'           => [
-        //
+    'attributes' => [
     ],
-
 ];
